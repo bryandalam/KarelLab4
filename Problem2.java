@@ -25,15 +25,16 @@ public class Problem2 extends Robot
         if (!frontIsClear()) {
             turnLeft();
             if(!frontIsClear()) {
-                putBeeper();
-                faceEast();
+                turnLeft();
+                turnLeft();
+                
             }
     }
    }
    public void findCorner() {
        while(frontIsClear()) {
            turnLeft();
-           if (!frontIsClear()) {
+           if (!frontIsClear() && !nextToABeeper()) {
                putBeeper();
                turnRight();
             }
@@ -42,7 +43,9 @@ public class Problem2 extends Robot
                 turnLeft();
                     
         }
+        
         move();
+        checkCorner();
     }
    }
    public void turnRight() {

@@ -18,7 +18,7 @@ public class Problem2Driver implements Directions
         World.setBeeperColor(Color.magenta);
         World.setStreetColor(Color.blue);
         World.setNeutroniumColor(Color.green.darker());
-        World.setDelay(15);  
+        World.setDelay(3);  
         World.setVisible(true);
     }
 }
